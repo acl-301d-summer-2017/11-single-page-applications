@@ -5,7 +5,7 @@ var app = app || {};
 //linked to a single controller function to handle it. Note that these routes do not 
 //need to wrapped in an IIFE.
 
-page( '/', function () {console('@ index page');} );
+page( '/', function () {console.log('@ index page');} );
 page( '/about', app.aboutController.init );
 page( '/article', app.articleController.init );
 // TO DO MAYBE make a thing for New controller page( '/new', app.initNewArticlePage)
