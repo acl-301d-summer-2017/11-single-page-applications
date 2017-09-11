@@ -6,8 +6,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
-// const conString = 'postgres://USERNAME:PASSWORD@HOST:PORT';
-const conString = ''; // TODO: Don't forget to set your own conString
+const conString = 'postgres://postgres:1234@localhost:5432/kilovolt';
+//const conString = ''; // DONE/TODO: Don't forget to set your own conString
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
@@ -24,7 +24,10 @@ app.get('/articles', (request, response) => {
     INNER JOIN authors
       ON articles.author_id=authors.author_id;`
   )
-  .then(result => response.send(result.rows))
+  .then(result => {
+    console.log('I was called!!!');
+    response.send(result.rows)
+  })
   .catch(console.error);
 });
 
