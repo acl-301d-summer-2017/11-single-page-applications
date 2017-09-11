@@ -8,7 +8,9 @@ var app = app || {};
   //reveals just the #about section:
   aboutController.init = () => {
     $('#articles').hide();
+    $('#about').hide();
     $('#about').show();
+    
 
   }
 

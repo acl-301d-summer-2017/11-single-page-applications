@@ -25,17 +25,17 @@ var app = app || {};
 
   Article.fetchAll = callback => {
     $.get('/articles')
-    .then(
-      results => {
-        Article.loadAll(results);
-        callback();
-      }
-    )
+      .then(
+        results => {
+          Article.loadAll(results);
+          callback();
+        }
+      )
   };
 
   Article.numWordsAll = () => {
     return Article.all.map(article => article.body.match(/\b\w+/g).length)
-                      .reduce((a, b) => a + b)
+      .reduce((a, b) => a + b)
   };
 
   Article.allAuthors = () => {

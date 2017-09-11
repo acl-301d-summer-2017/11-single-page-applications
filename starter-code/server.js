@@ -19,6 +19,8 @@ app.use(express.static('./public'));
 app.get('/new', (request, response) => response.sendFile('new.html', {root: './public'}));
 app.get('/admin', (request, response) => response.sendFile('admin.html', {root: './public'}));
 app.get('/articles', (request, response) => {
+
+  
   client.query(`
     SELECT * FROM articles
     INNER JOIN authors

@@ -5,10 +5,10 @@ var app = app || {};
 //linked to a single controller function to handle it. Note that these routes do not 
 //need to wrapped in an IIFE.
 
-page( '/', function () {console.log('@ index page');} );
+
 page( '/about', app.aboutController.init );
-page( '/article', app.articleController.init );
-// TO DO MAYBE make a thing for New controller page( '/new', app.initNewArticlePage)
+page( '/', app.articleController.init );
+
 
 
 // DONE TODO: What function do you call to activate page.js? Fire it off now, to execute.
