@@ -11,7 +11,7 @@ page( '/article', app.articleController.init );
 // TO DO MAYBE make a thing for New controller page( '/new', app.initNewArticlePage)
 
 
-// TODO: What function do you call to activate page.js? Fire it off now, to execute.
+// DONE TODO: What function do you call to activate page.js? Fire it off now, to execute.
 // Note that it does not need to be attached to the 'app' object nor wrapped in an IIFE.
 
 page.start();
