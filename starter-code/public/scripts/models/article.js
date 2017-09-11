@@ -101,8 +101,8 @@ var app = app || {};
         publishedOn: this.publishedOn,
         title: this.title}
     })
-    .then(console.log)
-    .then(callback);
+      .then(console.log)
+      .then(callback);
   };
 
   module.Article = Article;
