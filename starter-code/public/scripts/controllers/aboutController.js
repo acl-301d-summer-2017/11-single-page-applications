@@ -10,9 +10,9 @@ var app = app || {};
   aboutController.init = function (){
     $( '.tab-content' ).hide();
     $( ' #about' ).show(); 
-    app.aboutView.init();   
+      
   }
-  
+  aboutController.init(); 
 
 
   module.aboutController = aboutController;
